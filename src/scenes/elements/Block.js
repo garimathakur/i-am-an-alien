@@ -6,6 +6,14 @@ const positions = [
     top: '30%',
     left: '50%',
   },
+  {
+    top: '10%',
+    left: '50%',
+  },
+  {
+    top: '30%',
+    left: '10%',
+  },
 ];
 
 const Block = styled.div`
@@ -16,6 +24,7 @@ const Block = styled.div`
 
   a {
     text-decoration: none;
+    color: ${props => props.linkColor};
   }
 
   a:visited {
