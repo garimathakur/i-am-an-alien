@@ -15,7 +15,7 @@ const AppContainer = styled.div`
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename='/i-am-an-alien'>
         <AppContainer>
           <Route exact path="/" render={() => (<Redirect to='/0'/>)}/>
           <Route path='/:sceneId' component={Scene}/>
