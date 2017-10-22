@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Block, Text, Link } from './elements';
 
-export default {
-  position: 1,
-  content: (props) => (
-    <div>
-      <p>blah blah</p>
-    </div>
-  ),
-  transition: {
-    in: null,
-    out: null,
-  }
-}
+const Component = () => (
+  <Block>
+    <Text>Your sense of <Link to="/5">self</Link> and <Link to="/0">time</Link> is broken</Text>
+  </Block>
+);
+
+export default Component;

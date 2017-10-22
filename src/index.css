@@ -1,6 +1,7 @@
 html, body, #root {
   height: 100%;
   width: 100%;
+  background-color: rgba(81,28,17,1);
 }
 
 body {
@@ -9,12 +10,4 @@ body {
   font-family: sans-serif;
   height: 100%;
   width: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  color: pink;
 }

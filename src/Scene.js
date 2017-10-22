@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Words from './Words';
 
 const SceneContainer = styled.div`
   background-color: rgba(81,28,17,1);
@@ -8,13 +7,9 @@ const SceneContainer = styled.div`
   width: 100%;
 `;
 
-const SceneLabel = styled.p`
-  position: fixed;
-`;
-
 const Scene = ({ match }) => {
-  const thing = require(`./scenes/${match.params.sceneId}`).default;
-  return <SceneContainer>{thing.content()}</SceneContainer>
+  const ThisScene = require(`./scenes/${match.params.sceneId}`).default;
+  return <SceneContainer><ThisScene/></SceneContainer>
 };
 
 export default Scene;

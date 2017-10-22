@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import scenes from './scenes';
 
 const positions = [
   {
@@ -9,17 +8,24 @@ const positions = [
   },
 ];
 
-const WordsContainer = styled.div`
+const Block = styled.div`
   font-family: serif;
   position: relative;
   top: ${props => positions[props.position].top};
   left: ${props => positions[props.position].left};
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: ${props => props.linkColor};
+  }
 `;
 
-const Words = ({ sceneId }) => (
-  <WordsContainer position={0}>
-    {scenes(sceneId)}
-  </WordsContainer>
-);
+Block.defaultProps = {
+  position: 0,
+  linkColor: 'pink',
+};
 
-export default Words;
+export default Block;

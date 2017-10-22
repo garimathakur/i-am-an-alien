@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Block, Text, Link } from './elements';
 
-export default {
-  position: 1,
-  content: (props) => (
-    <div>
-      <p>blah blah</p>
-    </div>
-  ),
-  transition: {
-    in: null,
-    out: null,
-  }
-}
+const Component = () => (
+  <Block>
+    <Text><Link to='/1'>cities</Link> without <Link to='/2'>citizens</Link></Text>
+  </Block>
+);
+
+export default Component;

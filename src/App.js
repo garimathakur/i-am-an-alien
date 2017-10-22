@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
+  Redirect,
 } from 'react-router-dom';
 import styled from 'styled-components';
 import Scene from './Scene';
@@ -16,7 +17,8 @@ class App extends Component {
     return (
       <Router>
         <AppContainer>
-          <Route path="/:sceneId" component={Scene}/>
+          <Route exact path="/" render={() => (<Redirect to='/0'/>)}/>
+          <Route path='/:sceneId' component={Scene}/>
         </AppContainer>
       </Router>
     );

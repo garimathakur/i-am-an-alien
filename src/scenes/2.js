@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Block, Text, Link } from './elements';
 
-export default {
-  position: 1,
-  content: (props) => (
-    <div>
-      <p>blah blah</p>
-    </div>
-  ),
-  transition: {
-    in: null,
-    out: null,
-  }
-}
+const Component = () => (
+  <Block>
+    <Text>Carry all immigration paper</Text>
+    <Text>with yourself at all <Link to="/3">times</Link></Text>
+  </Block>
+);
+
+export default Component;

@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Block, Text, Link } from './elements';
 
-export default {
-  position: 1,
-  content: (props) => (
-    <div>
-      <p>blah blah</p>
-    </div>
-  ),
-  transition: {
-    in: null,
-    out: null,
-  }
-}
+const Component = () => (
+  <Block linkColor='yellow'>
+    <Text><Link to="/6">If you are travelling without</Link></Text>
+    <Text><Link to="/6">your papers, your existence cannnot</Link></Text>
+    <Text><Link to="/6">be verified and you will be deported</Link></Text>
+    <Text><Link to="/6">back to the land of your fear</Link></Text>
+  </Block>
+);
+
+export default Component;
