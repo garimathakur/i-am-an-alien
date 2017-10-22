@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
+import styled from 'styled-components';
+import Scene from './Scene';
+
+const AppContainer = styled.div`
+  height: 100%;
+  width: 100%;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-
-      </div>
+      <Router>
+        <AppContainer>
+          <Route path="/:sceneId" component={Scene}/>
+        </AppContainer>
+      </Router>
     );
   }
 }
