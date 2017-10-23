@@ -6,9 +6,9 @@ const SceneContainer = styled.div`
   width: 100%;
 `;
 
-const Scene = ({ match }) => {
+const Scene = ({ match, history }) => {
   const ThisScene = require(`./scenes/${match.params.sceneId}`).default;
-  return <SceneContainer><ThisScene/></SceneContainer>
+  return <SceneContainer><ThisScene history={history}/></SceneContainer>
 };
 
 export default Scene;

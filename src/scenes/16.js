@@ -3,7 +3,8 @@ import { Block, Text, Link } from './elements';
 
 const Component = () => (
   <Block>
-    <Text>This scene might not exist.</Text>
+    <Text>There is no</Text>
+    <Text>for <Link to='/17'>you</Link></Text>
   </Block>
 );
 

@@ -39,7 +39,7 @@ class C extends Component {
         <a onClick={this.handleClick}>You have cut off all your feelings</a>
       </RotatedText> :
       <WhiteRotatedText serif={false} italic={true} key={this.state.otherCutoffFeelings.length}>
-        <Link to='/12'>You have cut off all your feelings</Link>
+        <Link to='/4'>You have cut off all your feelings</Link>
       </WhiteRotatedText>)
     );
     this.setState({

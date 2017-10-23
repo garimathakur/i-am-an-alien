@@ -1,10 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Block, Text, Link } from './elements';
+import styled, { keyframes } from 'styled-components';
 
-const Component = () => (
-  <Block>
-    <Text>This scene might not exist.</Text>
-  </Block>
-);
+const translate = keyframes`
+	from {
+		transform: translate(0px, 0px) rotate(50deg);
+	}
 
-export default Component;
+	to {
+		transform: translate(0px, 1000px) rotate(50deg);
+	}
+`;
+
+const HangingLinkText = styled(Text)`
+  transform: rotate(50deg);
+  animation: ${translate} 0.5s ease-in 0.5s 1 normal forwards;
+`;
+
+const Spacer = styled.div`
+  height: 48px;
+`;
+
+class C extends Component {
+  componentDidMount() {
+    this.listener = window.onclick = () => {
+      this.props.history.push('/16');
+    }
+  }
+
+  componentWillUnmount() {
+    this.listener = null;
+  }
+
+  render() {
+    return (
+      <Block>
+        <Spacer/>
+        <HangingLinkText><Link to='/14'>ladder</Link></HangingLinkText>
+      </Block>
+    );
+  }
+}
+
+export default C;
