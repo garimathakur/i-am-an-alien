@@ -14,7 +14,7 @@ const translate = keyframes`
 
 const HangingLinkText = styled(Text)`
   transform: rotate(50deg);
-  animation: ${translate} 0.5s ease-in 0.5s 1 normal forwards;
+  animation: ${translate} 0.5s ease-in 0s 1 normal forwards;
 `;
 
 const Spacer = styled.div`
