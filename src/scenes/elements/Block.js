@@ -34,7 +34,7 @@ const Block = styled.div`
 
 Block.defaultProps = {
   position: 0,
-  linkColor: 'pink',
+  linkColor: 'rgba(244,127,113,1)',
 };
 
 export default Block;

@@ -10,7 +10,7 @@ const Component = () => (
       <Text color='rgba(44,18,14,1)'>The top layer of your skin is peeling off</Text>
     </Block>
     <Block position={2} linkColor='yellow'>
-      <Text><Link to='/10'>Splendor of race</Link></Text>
+      <Text scale><Link to='/10'>Splendor of race</Link></Text>
     </Block>
   </SuperBlock>
 );
