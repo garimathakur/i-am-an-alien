@@ -32,7 +32,7 @@ class C extends Component {
           <Text textColor='red'>The top layer of your skin is peeling off</Text>
         </Block>
         <Block position={2} linkColor='yellow'>
-          <Text scale><Link to='/10'>Splendor of race</Link></Text>
+          <Text scale={true}><Link to='/10'>Splendor of race</Link></Text>
           {this.state.showSecondSplendor ? <SecondSplendorText><Link to='/10'>Splendor of race</Link></SecondSplendorText> : null}
         </Block>
       </SuperBlock>

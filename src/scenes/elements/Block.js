@@ -15,6 +15,14 @@ const positions = [
     top: '23%',
     left: '10%',
   },
+  {
+    top: '45%',
+    left: 'calc(50% - 80px)',
+  },
+  {
+    top: '80%',
+    left: '60%',
+  },
 ];
 
 const Block = styled.div`
@@ -25,6 +33,7 @@ const Block = styled.div`
   width: 45%;
 
   a {
+    cursor: pointer;
     text-decoration: none;
     color: ${props => colors[props.linkColor]};
   }
