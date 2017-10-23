@@ -23,20 +23,24 @@ const Spacer = styled.div`
 
 class C extends Component {
   componentDidMount() {
-    this.listener = window.onclick = () => {
-      this.props.history.push('/16');
-    }
+		setTimeout(() => {
+			window.addEventListener('click', this.listener, false);
+		}, 500);
   }
 
   componentWillUnmount() {
-    this.listener = null;
+    window.removeEventListener('click', this.listener, false);
   }
+
+	listener = () => {
+		this.props.history.push('/16');
+	}
 
   render() {
     return (
       <Block>
         <Spacer/>
-        <HangingLinkText><Link to='/14'>ladder</Link></HangingLinkText>
+        <HangingLinkText><Link to='/16'>ladder</Link></HangingLinkText>
       </Block>
     );
   }
