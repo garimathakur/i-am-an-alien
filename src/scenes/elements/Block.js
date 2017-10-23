@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import colors from './colors';
 
 const positions = [
   {
@@ -11,7 +12,7 @@ const positions = [
     left: '50%',
   },
   {
-    top: '30%',
+    top: '23%',
     left: '10%',
   },
 ];
@@ -21,20 +22,21 @@ const Block = styled.div`
   position: relative;
   top: ${props => positions[props.position].top};
   left: ${props => positions[props.position].left};
+  width: 45%;
 
   a {
     text-decoration: none;
-    color: ${props => props.linkColor};
+    color: ${props => colors[props.linkColor]};
   }
 
   a:visited {
-    color: ${props => props.linkColor};
+    color: ${props => colors[props.linkColor]};
   }
 `;
 
 Block.defaultProps = {
   position: 0,
-  linkColor: 'rgba(244,127,113,1)',
+  linkColor: 'pink',
 };
 
 export default Block;

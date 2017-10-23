@@ -7,6 +7,8 @@ const scale = keyframes`
 	}
 
 	to {
-		transform: scale(5.0);
+		transform: scale(1.3);
 	}
 `;
+
+export default scale;
