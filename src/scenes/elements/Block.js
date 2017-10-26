@@ -23,14 +23,19 @@ const positions = [
     top: '80%',
     left: '60%',
   },
+  {
+    top: '10%',
+    left: '10%',
+  },
 ];
 
 const Block = styled.div`
-  font-family: serif;
+  font-family: ${props => props.serif ? 'serif' : 'sans-serif'};
+  font-style: ${props => props.italic ? 'italic' : 'normal'};
   position: relative;
   top: ${props => positions[props.position].top};
   left: ${props => positions[props.position].left};
-  width: 45%;
+  width: ${props => props.width ? props.width : '45%'};
 
   a {
     cursor: pointer;

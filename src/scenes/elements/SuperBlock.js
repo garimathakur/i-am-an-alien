@@ -6,6 +6,8 @@ import colors from './colors';
 const SuperBlock = styled.div`
   width: 100%;
   height: 100%;
+  font-family: ${props => props.serif ? 'serif' : 'sans-serif'};
+  font-style: ${props => props.italic ? 'italic' : 'normal'};
 
   a {
     cursor: pointer;

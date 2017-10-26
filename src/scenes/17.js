@@ -3,7 +3,7 @@ import { Block, Text, Link } from './elements';
 
 const Component = () => (
   <Block>
-    <Text>This scene might not exist.</Text>
+    <Text><Link to='/18'>Borders have guards and the guards have guns</Link></Text>
   </Block>
 );
 

@@ -50,12 +50,12 @@ class C extends Component {
   render() {
     return (
       <SuperBlock>
-        <Block position={4} linkColor='pink'>
-          <Text serif={false} italic={true}>
+        <Block position={4} linkColor='pink' italic>
+          <Text serif={false}>
             <a onClick={this.handleClick.bind(this)}>You have cut off all your feelings</a>
           </Text>
         </Block>
-        <SuperBlock linkColor='yellow'>
+        <SuperBlock linkColor='yellow' italic>
           {this.state.otherCutoffFeelings}
         </SuperBlock>
       </SuperBlock>
