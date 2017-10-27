@@ -7,7 +7,7 @@ const scale = keyframes`
 	}
 
 	to {
-		transform: scale(1.3);
+		transform: scale(3.5);
 	}
 `;
 

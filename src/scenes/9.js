@@ -2,26 +2,7 @@ import React, { Component } from 'react';
 import { Block, Text, Link, SuperBlock } from './elements';
 import styled from 'styled-components';
 
-const SecondSplendorText = styled(Text)`
-  position: absolute;
-  top: -31px;
-  left: -93px;
-  transform: scale(3.0);
-`;
-
 class C extends Component {
-  state = {
-    showSecondSplendor: false,
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        showSecondSplendor: true,
-      });
-    }, 2000);
-  }
-
   render() {
     return (
       <SuperBlock>
@@ -33,7 +14,6 @@ class C extends Component {
         </Block>
         <Block position={2} linkColor='yellow'>
           <Text scale={true}><Link to='/10'>Splendor of race</Link></Text>
-          {this.state.showSecondSplendor ? <SecondSplendorText><Link to='/10'>Splendor of race</Link></SecondSplendorText> : null}
         </Block>
       </SuperBlock>
     );
