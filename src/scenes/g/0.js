@@ -2,6 +2,7 @@ import React from 'react';
 import L from 'leaflet';
 import { Map, TileLayer } from 'react-leaflet';
 import styled from 'styled-components';
+import colors from '../elements/colors';
 
 const TOTAL_TILES = 16;
 const TILE_COLS = 8;
@@ -28,6 +29,7 @@ const getImageUrl = (x, y) => {
 
 const StyledMap = styled(Map)`
   height: 100%;
+  background: linear-gradient(red, yellow, red);
 `;
 // 128x30
 class CustomTileLayer extends TileLayer {
