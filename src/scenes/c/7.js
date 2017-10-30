@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Block, Text, Link, SuperBlock } from './elements';
+import { Block, Text, Link, SuperBlock } from '../elements';
 import styled, { keyframes } from 'styled-components';
 
 const randomNumInRange = (max, min) => Math.random() * (max - min + 1) + min;

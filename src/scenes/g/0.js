@@ -29,7 +29,7 @@ const getImageUrl = (x, y) => {
 
 const StyledMap = styled(Map)`
   height: 100%;
-  background: linear-gradient(red, yellow, red);
+  background: linear-gradient(${colors.maroon}, yellow, ${colors.maroon});
 `;
 // 128x30
 class CustomTileLayer extends TileLayer {
