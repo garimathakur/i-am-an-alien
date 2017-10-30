@@ -7,7 +7,8 @@ const SceneContainer = styled.div`
 `;
 
 const Scene = ({ match, history }) => {
-  const ThisScene = require(`./scenes/${match.params.sceneId}`).default;
+  const { a, b } = match.params;
+  const ThisScene = b ? require(`./scenes/${a}/${b}`).default : require(`./scenes/${a}`).default;
   return <SceneContainer><ThisScene history={history}/></SceneContainer>
 };
 

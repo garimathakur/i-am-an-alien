@@ -17,8 +17,8 @@ class App extends Component {
     return (
       <Router basename='/i-am-an-alien'>
         <AppContainer>
-          <Route exact path="/" render={() => (<Redirect to='/0'/>)}/>
-          <Route path='/:sceneId' component={Scene}/>
+          <Route exact path="/" render={() => (<Redirect to='/a/0'/>)}/>
+          <Route path='/:a/:b' component={Scene}/>
         </AppContainer>
       </Router>
     );

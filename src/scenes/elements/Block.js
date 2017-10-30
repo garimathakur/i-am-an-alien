@@ -27,6 +27,10 @@ const positions = [
     top: '10%',
     left: '10%',
   },
+  {
+    top: '80%',
+    left: '60%',
+  }
 ];
 
 const Block = styled.div`
