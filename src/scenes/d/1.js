@@ -26,6 +26,7 @@ const WhiteRotatedText = styled(RotatedText)`
 class C extends Component {
   constructor(props) {
     super(props);
+    window.hasVistedAnimatedFeelings1 = true;
     this.state = {
       otherCutoffFeelings: [],
     };
@@ -39,7 +40,7 @@ class C extends Component {
         <a onClick={this.handleClick}>You have cut off all your feelings</a>
       </RotatedText> :
       <WhiteRotatedText serif={false} italic={true} key={this.state.otherCutoffFeelings.length}>
-        <Link to='/a/4'>You have cut off all your feelings</Link>
+        <Link to='/d/0'>You have cut off all your feelings</Link>
       </WhiteRotatedText>)
     );
     this.setState({
@@ -50,7 +51,7 @@ class C extends Component {
   render() {
     return (
       <SuperBlock>
-        <Block position={4} linkColor='pink' italic>
+        <Block position={4} linkColor='pink' italic sensSerif={true}>
           <Text serif={false}>
             <a onClick={this.handleClick.bind(this)}>You have cut off all your feelings</a>
           </Text>

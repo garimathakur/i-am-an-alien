@@ -34,27 +34,31 @@ const positions = [
 ];
 
 const Block = styled.div`
-  font-family: ${props => props.serif ? 'serif' : 'sans-serif'};
+  font-weight: normal;
+  font-family: ${props => props.sensSerif ? 'Helvetica' : 'Libre Baskerville'}, ${props => props.sensSerif ? 'sans-serif' : 'serif'};
   font-style: ${props => props.italic ? 'italic' : 'normal'};
   position: relative;
   top: ${props => positions[props.position].top};
   left: ${props => positions[props.position].left};
   width: ${props => props.width ? props.width : '45%'};
+  color: ${props => props.textColor}
 
   a {
     cursor: pointer;
     text-decoration: none;
-    color: ${props => colors[props.linkColor]};
+    color: ${props => props.linkColor}
   }
 
   a:visited {
-    color: ${props => colors[props.linkColor]};
+    text-decoration: none;
+    color: ${props => colors.pink};
   }
 `;
 
 Block.defaultProps = {
   position: 0,
-  linkColor: 'pink',
+  linkColor: colors.pink,
+  textColor: colors.yellow,
 };
 
 export default Block;

@@ -10,7 +10,7 @@ class C extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      yous: [<Text><Link to='/d/0'>you</Link></Text>],
+      yous: [<Text><Link to='/c/7'>you</Link></Text>],
     }
   }
 

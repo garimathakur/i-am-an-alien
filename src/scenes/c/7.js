@@ -38,12 +38,12 @@ class C extends Component {
   componentDidMount() {
     setTimeout(() => {
       const yous = [
-        <GrowingYou key={'a'}>you are an alien</GrowingYou>,
-        <GrowingYou key={'b'}>you are an alien</GrowingYou>,
-        <GrowingYou key={'c'}>you are an alien</GrowingYou>,
-        <GrowingYou key={'d'}>you are an alien</GrowingYou>,
-        <GrowingYou key={'e'}>you are an alien</GrowingYou>,
-        <GrowingYou key={'f'}>you are an alien</GrowingYou>,
+        <GrowingYou textColor='pink' key={'a'}>you are an alien</GrowingYou>,
+        <GrowingYou textColor='pink' key={'b'}>you are an alien</GrowingYou>,
+        <GrowingYou textColor='pink' key={'c'}>you are an alien</GrowingYou>,
+        <GrowingYou textColor='pink' key={'d'}>you are an alien</GrowingYou>,
+        <GrowingYou textColor='pink' key={'e'}><Link to='/c/8'>you are an alien</Link></GrowingYou>,
+        <GrowingYou textColor='pink' key={'f'}>you are an alien</GrowingYou>,
       ]
       this.setState({
         yous,
@@ -58,7 +58,7 @@ class C extends Component {
           {this.state.yous}
         </Block>
         <Block position={6}>
-          <Text><Link to='/18'>you are an alien</Link></Text>
+          <Text textColor='pink'>you are an alien</Text>
         </Block>
       </SuperBlock>
     )
