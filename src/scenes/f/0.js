@@ -2,10 +2,26 @@ import React, { Component } from 'react';
 import { Block, Text, Link } from '../elements';
 import styled from 'styled-components';
 import colors from '../elements/colors';
+import background from '../../images/gradient.jpg';
 
-const bg = styled.div`
-  background: linear-gradient(${colors.maroon}, yellow, ${colors.maroon});
-`
+const Background = styled.div`
+  height: 100%;
+  width: 100%;
+  background-image: url(${background});
+  background-size: cover;
+`;
+
+const LastText = styled(Text)`
+  a {
+    color: ${colors.yellow};
+  }
+  a:visited {
+    color: ${colors.yellow};
+  }
+  a:hover {
+    color: ${colors.pink};
+  }
+`;
 
 const Spacer = styled.div`
   height: 48px;
@@ -34,7 +50,7 @@ const allLines = [
     <Text>They are getting wet and washed away in the rain</Text>
   </div>,
   <div key='h'>
-    <Text><Link to='/'>You think you are an ocean, but you are just a tiny tear drop</Link></Text>
+    <LastText><Link to='/'>You think you are an ocean, but you are just a tiny tear drop</Link></LastText>
   </div>,
 ];
 
@@ -72,9 +88,11 @@ class C extends Component {
 
   render() {
     return (
-      <Block position={5} width='80%' sansSerif={true} italic={true}>
-        {this.state.lines}
-      </Block>
+      <Background>
+        <Block position={5} width='80%' sansSerif={true} italic={true} linkColor='yellow'>
+          {this.state.lines}
+        </Block>
+      </Background>
     )
   }
 }

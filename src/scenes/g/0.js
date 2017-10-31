@@ -3,6 +3,7 @@ import L from 'leaflet';
 import { Map, TileLayer } from 'react-leaflet';
 import styled from 'styled-components';
 import colors from '../elements/colors';
+import background from '../../images/gradient.jpg';
 
 const TOTAL_TILES = 16;
 const TILE_COLS = 8;
@@ -29,9 +30,10 @@ const getImageUrl = (x, y) => {
 
 const StyledMap = styled(Map)`
   height: 100%;
-  background: linear-gradient(${colors.maroon}, yellow, ${colors.maroon});
+  background-image: url(${background});
+  background-size: cover;
 `;
-// 128x30
+
 class CustomTileLayer extends TileLayer {
   componentWillMount() {
     super.componentWillMount();
