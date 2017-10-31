@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.100cb3f5.css",
-  "main.css.map": "static/css/main.100cb3f5.css.map",
-  "main.js": "static/js/main.22779d4f.js",
-  "main.js.map": "static/js/main.22779d4f.js.map",
+  "main.css": "static/css/main.8bfff9c3.css",
+  "main.css.map": "static/css/main.8bfff9c3.css.map",
+  "main.js": "static/js/main.312b8658.js",
+  "main.js.map": "static/js/main.312b8658.js.map",
   "static/media/0.png": "static/media/0.8f7cd41f.png",
   "static/media/1.png": "static/media/1.1e800600.png",
   "static/media/10.png": "static/media/10.066ff383.png",
@@ -17,5 +17,6 @@
   "static/media/6.png": "static/media/6.d75136ef.png",
   "static/media/7.png": "static/media/7.c2b6e826.png",
   "static/media/8.png": "static/media/8.53895d1a.png",
-  "static/media/9.png": "static/media/9.33f554e3.png"
+  "static/media/9.png": "static/media/9.33f554e3.png",
+  "static/media/gradient.jpg": "static/media/gradient.e83b897d.jpg"
 }
