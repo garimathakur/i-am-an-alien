@@ -51,7 +51,7 @@ class C extends Component {
   render() {
     return (
       <SuperBlock>
-        <Block position={4} linkColor='pink' italic sensSerif={true}>
+        <Block position={4} linkColor='pink' italic sansSerif={true}>
           <Text serif={false}>
             <a onClick={this.handleClick.bind(this)}>You have cut off all your feelings</a>
           </Text>

@@ -15,3 +15,7 @@ body {
 p {
   font-size: 1.4em;
 }
+
+a, a:visited {
+  text-decoration: none;
+}

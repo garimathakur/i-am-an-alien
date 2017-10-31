@@ -14,7 +14,7 @@ class C extends Component {
   render() {
     return (
       <SuperBlock>
-        <Block position={4} linkColor='pink' italic sensSerif={true}>
+        <Block position={4} linkColor='pink' italic sansSerif={true}>
           <Text serif={false}>
             <Link to='/a/4'>You have cut off all your feelings</Link>
           </Text>
