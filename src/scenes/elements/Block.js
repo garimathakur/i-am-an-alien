@@ -30,12 +30,16 @@ const positions = [
   {
     top: '80%',
     left: '60%',
+  },
+  {
+    top: '85%',
+    left: '45%',
   }
 ];
 
 const Block = styled.div`
   font-weight: normal;
-  font-family: ${props => props.sensSerif ? 'Helvetica' : 'Libre Baskerville'}, ${props => props.sensSerif ? 'sans-serif' : 'serif'};
+  font-family: ${props => props.sansSerif ? 'Helvetica' : 'Libre Baskerville'}, ${props => props.sansSerif ? 'sans-serif' : 'serif'};
   font-style: ${props => props.italic ? 'italic' : 'normal'};
   position: relative;
   top: ${props => positions[props.position].top};

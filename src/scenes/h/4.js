@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { Block, Text, Link } from '../elements';
 import styled from 'styled-components';
-import colors from '../elements/colors';
-
-const bg = styled.div`
-  background: linear-gradient(${colors.maroon}, yellow, ${colors.maroon});
-`
 
 const Spacer = styled.div`
   height: 48px;
@@ -13,28 +8,38 @@ const Spacer = styled.div`
 
 const allLines = [
   <div key='a'>
-    <Text>Imagine a landscape made of your multiple mindscapes</Text>
+    <Text>A land made of aliens</Text>
+    <Text>We are all in this together</Text>
   </div>,
   <div key='b'>
-    <Text>You come from the land where lizards are crawling on the white walls</Text>
+    <Text>But we are not in this together</Text>
+    <Text>You start to travel to the land of glass</Text>
   </div>,
   <div key='c'>
-    <Text>You are a brown slithery translucent lizard</Text>
+    <Text>Everyone has walls of glass</Text>
+    <Text>Every one lives inside walls of glass</Text>
   </div>,
   <div key='d'>
-    <Text>You are being rubbed by the slimy white eyeballs all over your body</Text>
+    <Text>They think you are scratching on their walls</Text>
   </div>,
   <div key='e'>
-    <Text>The moss is growing</Text>
+    <Text>They think you are snatching their sleep and sucking blood from their lands to survive</Text>
   </div>,
   <div key='f'>
-    <Text>Giant Snails are walking all over the piles of your migration paper</Text>
+    <Text>“Where do you think your ass got this car from?</Text>
+    <Text>Aren’t you done sucking up all the resources, a men yelled coming in the opposite direction on a one way street when <Link to='/h/5'>you</Link> honked at him”</Text>
   </div>,
   <div key='g'>
-    <Text>They are getting wet and washed away in the rain</Text>
+    <Text>Are you done?</Text>
   </div>,
   <div key='h'>
-    <Text><Link to='/'>You think you are an ocean, but you are just a tiny tear drop</Link></Text>
+    <Text>Have you cum yet? Can I move on</Text>
+  </div>,
+  <div key='i'>
+    <Text>You are covered with an</Text>
+    <Text>invisibility cloak</Text>
+    <Text>You can only be seen by a few others</Text>
+    <Text>You are the other</Text>
   </div>,
 ];
 
@@ -72,7 +77,7 @@ class C extends Component {
 
   render() {
     return (
-      <Block position={5} width='80%' sansSerif={true} italic={true}>
+      <Block position={2}>
         {this.state.lines}
       </Block>
     )
