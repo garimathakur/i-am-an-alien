@@ -14,17 +14,20 @@ const TILE_SIZE = 1024;
 const urls = {};
 
 const getImageUrl = (x, y) => {
-  const parsedX = Math.abs(x) < TILE_COLS ? (x < 0 ? (TILE_COLS + x) : x) : (TILE_COLS + (Math.abs(x) % TILE_COLS));
-  const imageNum = (Math.abs(y) * 8) + parsedX;
-  const parsedImageNum = imageNum < TOTAL_TILES ? imageNum : imageNum % TOTAL_TILES;
-
-  if (urls[parsedImageNum]) {
-    console.log('urls[parsedImageNum]:1', urls[parsedImageNum]);
-    return urls[parsedImageNum];
+  // console.log('x, y', x, y);
+  const xNeg = x < 0;
+  const evenRow = y % 2;
+  const xMod = x % 8;
+  // console.log('xNeg, evenRow, xMod', xNeg, evenRow, xMod);
+  const imageNum = (xNeg ? (evenRow ? xMod + 7 : xMod + 15 : 15) : (evenRow ? xMod : xMod + 8));
+  // console.log('imageNum', imageNum);
+  if (urls[imageNum]) {
+    console.log('urls[imageNum]:1', urls[imageNum]);
+    return urls[imageNum];
   } else {
-    urls[parsedImageNum] = require(`../../images/back/${parsedImageNum}.png`);
-    console.log('urls[parsedImageNum]:2', urls[parsedImageNum]);
-    return urls[parsedImageNum];
+    urls[imageNum] = require(`../../images/back/${imageNum}.png`);
+    console.log('urls[imageNum]:2', urls[imageNum]);
+    return urls[imageNum];
   }
 }
 
@@ -54,7 +57,7 @@ class CustomTileLayer extends TileLayer {
   }
 }
 
-const position = [51.505, -0.09];
+const position = [0, 0];
 
 const Component = () => (
   <StyledMap
