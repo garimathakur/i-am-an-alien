@@ -17,8 +17,8 @@ const getImageUrl = (x, y) => {
   // console.log('x, y', x, y);
   const xNeg = x < 0;
   const evenRow = y % 2;
-  const xMod = x % 8;
-  // console.log('xNeg, evenRow, xMod', xNeg, evenRow, xMod);
+  const xMod = xNeg ? (x + 1) % 8 : x % 8;
+  console.log('xNeg, evenRow, xMod', xNeg, evenRow, xMod);
   const imageNum = (xNeg ? (evenRow ? xMod + 7 : xMod + 15 : 15) : (evenRow ? xMod : xMod + 8));
   // console.log('imageNum', imageNum);
   if (urls[imageNum]) {
