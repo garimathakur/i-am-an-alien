@@ -7,10 +7,10 @@ class C extends Component {
     return (
       <SuperBlock>
         <Block position={1} linkColor='yellow'>
-          <Text textColor='red'>Your body is horrific and harmful</Text>
-          <Text textColor='red'>Your perceptions have been altered and rendered.</Text>
-          <Text textColor='red'>Are you safe from all fear and rage from within and outside?</Text>
-          <Text textColor='red'>The top layer of your skin is peeling off</Text>
+          <Text textColor='maroon'>Your body is horrific and harmful</Text>
+          <Text textColor='maroon'>Your perceptions have been altered and rendered.</Text>
+          <Text textColor='maroon'>Are you safe from all fear and rage from within and outside?</Text>
+          <Text textColor='maroon'>The top layer of your skin is peeling off</Text>
         </Block>
         <Block position={2} linkColor='yellow'>
           <Text scale={true}><Link to='/d/0'>Splendor of race</Link></Text>
