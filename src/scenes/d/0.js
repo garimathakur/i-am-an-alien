@@ -14,9 +14,17 @@ class C extends Component {
 
   render() {
     return (
-      <Block position={3}>
-        {window.hasVistedAnimatedFeelings1 ? <Text>estranged</Text> : <Text><Link to='/d/1'>estranged</Link></Text>} <Text>or</Text> {window.hasVistedAnimatedFeelings2 ? <Text>excluded</Text> : <Text><Link to='/d/2'>excluded</Link></Text>}
-      </Block>
+      <SuperBlock>
+        <Block position={5}>
+          {window.hasVistedAnimatedFeelings1 ? <Text>estranged</Text> : <Text><Link to={this.props.to || '/d/1'}>estranged</Link></Text>}
+        </Block>
+        <Block position={9}>
+          <Text>or</Text>
+        </Block>
+        <Block position={10}>
+          {window.hasVistedAnimatedFeelings2 ? <Text>excluded</Text> : <Text><Link to={this.props.to || '/d/2'}>excluded</Link></Text>}
+        </Block>
+      </SuperBlock>
     );
   }
 }

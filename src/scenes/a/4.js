@@ -35,6 +35,7 @@ const RegularSpan = styled.span`
 `;
 
 const HangingSpan = styled.span`
+  color: ${props => colors[props.textColor]};
   float: left;
   transform: rotate(90deg);
   margin-top: 20px;
@@ -48,14 +49,18 @@ const NextBlock = styled(Block)`
   line-height: 40px;
 `;
 
-const Component = () => (
+const Component = (props) => (
   <Block>
-    <RegularSpan>Your sense of </RegularSpan><HangingSpan><Link to="/b/0"> self</Link></HangingSpan><RegularSpan>and <Link to="/c/0">time</Link> is broken</RegularSpan>
+    <RegularSpan>Your sense of </RegularSpan><HangingSpan textColor='yellow'>{props.selfLink ? <Link to="/b/0"> self</Link> : 'self'}</HangingSpan><RegularSpan>and <Link to="/c/0">time</Link> is broken</RegularSpan>
     <GrowingSelf key={'a'}>self</GrowingSelf>
     <GrowingSelf key={'b'}>self</GrowingSelf>
     <GrowingSelf key={'c'}>self</GrowingSelf>
     <GrowingSelf key={'d'}>self</GrowingSelf>
   </Block>
 );
+
+Component.defaultProps = {
+  selfLink: true,
+}
 
 export default Component;

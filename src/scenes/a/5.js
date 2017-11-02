@@ -1,10 +1,6 @@
-import React from 'react';
-import { Block, Text, Link } from '../elements';
+import React, { Component } from 'react';
+import Four from './4.js';
 
-const Component = () => (
-  <Block>
-    <Text>Your sense of self and <Link to="/c/0">time</Link> is broken</Text>
-  </Block>
-);
+const C = (props) => <Four selfLink={false} {...props}/>;
 
-export default Component;
+export default C;

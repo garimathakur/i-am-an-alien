@@ -38,6 +38,14 @@ const positions = [
   {
     top: '30%',
     left: '20%',
+  },
+  {
+    top: '50%',
+    left: '10%'
+  },
+  {
+    top: '70%',
+    left: '60%'
   }
 ];
 
