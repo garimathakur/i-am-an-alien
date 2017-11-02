@@ -1,46 +1,52 @@
 import React, { Component } from 'react';
 import { Block, Text, Link } from '../elements';
 import styled from 'styled-components';
+import colors from '../elements/colors';
 
 const Spacer = styled.div`
   height: 48px;
 `;
 
+const YellowLinkDiv = styled.div`
+  a, a:visited {
+    color: ${colors.yellow}
+  }
+`;
+
 const allLines = [
   <div key='a'>
-    <Text>A land made of aliens</Text>
-    <Text>We are all in this together</Text>
+    <Text textColor='white'>A land made of aliens<br/>We are all in this together</Text>
   </div>,
   <div key='b'>
-    <Text>But we are not in this together</Text>
-    <Text>You start to travel to the land of glass</Text>
+    <Text textColor='white'>But we are not in this together<br/>You start to travel to the land of glass</Text>
   </div>,
   <div key='c'>
-    <Text>Everyone has walls of glass</Text>
-    <Text>Every one lives inside walls of glass</Text>
+    <Text textColor='white'>Everyone has walls of glass<br/>Every one lives inside walls of glass</Text>
   </div>,
   <div key='d'>
-    <Text>They think you are scratching on their walls</Text>
+    <Text textColor='white'>They think you are scratching on their walls</Text>
   </div>,
   <div key='e'>
-    <Text>They think you are snatching their sleep and sucking blood from their lands to survive</Text>
+    <Text textColor='white'>They think you are snatching their sleep and sucking blood from their lands to survive</Text>
   </div>,
   <div key='f'>
-    <Text>“Where do you think your ass got this car from?</Text>
-    <Text>Aren’t you done sucking up all the resources, a men yelled coming in the opposite direction on a one way street when you honked at him”</Text>
+    <Text textColor='white' italic={true} sansSerif={true}>“Where do you think your ass got this car from?<br/>Aren’t you done sucking up all the resources, a man yelled coming in the opposite direction on a one way street when you honked at him”</Text>
   </div>,
   <div key='g'>
-    <Text>Are you done?</Text>
+    <Text textColor='white'>Are you done?</Text>
   </div>,
   <div key='h'>
-    <Text>Have you cum yet? Can I move on</Text>
+    <Text textColor='white'>Have you cum yet? Can I move on</Text>
   </div>,
   <div key='i'>
-    <Text>You are covered with an</Text>
-    <Text>invisibility cloak</Text>
-    <Text>You can only be seen by a few others</Text>
-    <Text><Link to='/h/5'>You</Link> are the other</Text>
+    <Text textColor='white'>You are covered with an invisibility cloak</Text>
   </div>,
+  <div key='j'>
+    <Text textColor='white'>You can only be seen by a few others</Text>
+  </div>,
+  <YellowLinkDiv key='k'>
+    <Text textColor='white'><Link to='/h/5'>You</Link> are the other</Text>
+  </YellowLinkDiv>,
 ];
 
 class C extends Component {
