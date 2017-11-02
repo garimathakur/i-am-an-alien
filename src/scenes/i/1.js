@@ -14,7 +14,7 @@ const vals = {
   touch: <BaskervilleDiv><Text>Everyone will only touch you through their glass walls</Text></BaskervilleDiv>,
   exist: <BaskervilleDiv><Text>You are loosing peices of your self</Text><Text>Can you gather them?</Text></BaskervilleDiv>,
   speak: <BaskervilleDiv><Text>You can speak but you have no voice</Text></BaskervilleDiv>,
-  travel: <BaskervilleDiv><Text>You are traveling to a land of brown dirt like hair, volcanoes of cheese,</Text><Text>streams of turmeric lattes, cardamom chai shakes and droids consuming them</Text><Text>Droids can be  exed with the new yoga training exercises</Text></BaskervilleDiv>,
+  travel: <BaskervilleDiv><Text>You are traveling to a land of brown dirt like hair, volcanoes of cheese, streams of turmeric lattes, cardamom chai shakes and droids consuming them</Text><Text>Droids can be flexed with the new yoga training exercises</Text></BaskervilleDiv>,
 };
 
 const TopDiv = styled.div`
@@ -80,8 +80,8 @@ class C extends Component {
 
     if (showWork && showSleep && showTouch && showExist && showSpeak && showTravel) {
       setTimeout(() => {
-        this.props.history.push('/c/8');
-      }, 1000);
+        this.props.history.push('/c/10');
+      }, 4000);
     }
   }
 

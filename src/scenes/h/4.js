@@ -27,7 +27,7 @@ const allLines = [
   </div>,
   <div key='f'>
     <Text>“Where do you think your ass got this car from?</Text>
-    <Text>Aren’t you done sucking up all the resources, a men yelled coming in the opposite direction on a one way street when <Link to='/h/5'>you</Link> honked at him”</Text>
+    <Text>Aren’t you done sucking up all the resources, a men yelled coming in the opposite direction on a one way street when you honked at him”</Text>
   </div>,
   <div key='g'>
     <Text>Are you done?</Text>
@@ -39,7 +39,7 @@ const allLines = [
     <Text>You are covered with an</Text>
     <Text>invisibility cloak</Text>
     <Text>You can only be seen by a few others</Text>
-    <Text>You are the other</Text>
+    <Text><Link to='/h/5'>You</Link> are the other</Text>
   </div>,
 ];
 

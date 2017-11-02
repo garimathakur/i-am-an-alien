@@ -50,7 +50,7 @@ const allLines = [
     <Text>They are getting wet and washed away in the rain</Text>
   </div>,
   <div key='h'>
-    <LastText><Link to='/'>You think you are an ocean, but you are just a tiny tear drop</Link></LastText>
+    <LastText><Link to='/i/0'>You think you are an ocean, but you are just a tiny tear drop</Link></LastText>
   </div>,
 ];
 

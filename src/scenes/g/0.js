@@ -67,7 +67,7 @@ const Caret = styled.button`
   height: 0;
   border-top: 60px solid transparent;
   border-bottom: 60px solid transparent;
-  border-left: 60px solid green;
+  border-left: 60px solid ${colors.pink};
   background: transparent;
   cursor: pointer;
 `;
@@ -87,7 +87,7 @@ class C extends Component {
           <Caret onClick={() => this.props.history.push('/f/0')}/>
         )
       })
-    }, 2500);
+    }, 30000);
   }
 
   render() {
