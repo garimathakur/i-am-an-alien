@@ -4,6 +4,7 @@ const pink = 'white';
 const red = 'rgba(210,35,42,1)';
 const white = 'white';
 const maroon = 'rgba(91,34,18,1)';
+const blue = 'rgba(37,64,143,1)';
 
 export default {
   yellow,
@@ -11,4 +12,5 @@ export default {
   red,
   white,
   maroon,
+  blue,
 };

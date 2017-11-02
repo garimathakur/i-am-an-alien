@@ -57,22 +57,22 @@ const Block = styled.div`
   top: ${props => positions[props.position].top};
   left: ${props => positions[props.position].left};
   width: ${props => props.width ? props.width : '45%'};
-  color: ${props => props.textColor}
+  color: ${props => colors[props.textColor]};
 
   a {
     cursor: pointer;
-    color: ${props => props.linkColor};
+    color: ${props => colors[props.linkColor]};
   }
 
   a:visited {
-    color: ${props => colors.pink};
+    color: ${props => colors[props.linkColor]};
   }
 `;
 
 Block.defaultProps = {
   position: 0,
-  linkColor: colors.pink,
-  textColor: colors.yellow,
+  linkColor: 'pink',
+  textColor: 'yellow',
 };
 
 export default Block;
