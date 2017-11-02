@@ -8,8 +8,8 @@ const Spacer = styled.div`
 
 const allLines = [
   <div>
-    <Text><Link to='/'>The walls of these palaces have</Link></Text>
-    <Text><Link to='/'>been marked and scratched </Link></Text>
+    <Text><Link to='/h/4'>The walls of these palaces have</Link></Text>
+    <Text><Link to='/h/4'>been marked and scratched </Link></Text>
   </div>,
 ];
 
