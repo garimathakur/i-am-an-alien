@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import L from 'leaflet';
 import { Map, TileLayer } from 'react-leaflet';
 import styled from 'styled-components';
@@ -39,7 +39,6 @@ class CustomTileLayer extends TileLayer {
     const { map, url, ...props } = this.props;
 
     this.leafletElement.__proto__.getTileUrl = function (tilePoint) {
-      console.log('tilePoint', tilePoint);
       if (tilePoint.z === ZOOM_LEVEL) {
         if (tilePoint.y < TILE_COLS) {
           return getImageUrl(tilePoint.x, tilePoint.y);
@@ -54,24 +53,64 @@ class CustomTileLayer extends TileLayer {
 
 const position = [0, 0];
 
-const Component = () => (
-  <StyledMap
-    center={position}
-    crs={L.CRS.Simple}
-    zoom={ZOOM_LEVEL}
-    maxZoom={ZOOM_LEVEL}
-    minZoom={ZOOM_LEVEL}
-    zoomControl={false}
-    tileSize={TILE_SIZE}
-    detectRetina={true}>
-    <CustomTileLayer
-      url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-      getTileUrl={(a) => {
-        console.log('a', a);
-      }}
-      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    />
-  </StyledMap>
-);
+const OuterDiv = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
-export default Component;
+const Caret = styled.button`
+  z-index: 1000000000;
+  top: calc(50% - 50px);
+  left: 81%;
+  position: fixed;
+  width: 1000px;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid green;
+  background: transparent;
+  cursor: pointer;
+`;
+
+class C extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      caret: null,
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        caret: (
+          <Caret onClick={() => this.props.history.push('/f/0')}/>
+        )
+      })
+    }, 2500);
+  }
+
+  render() {
+    return (
+      <OuterDiv>
+        <StyledMap
+          center={position}
+          crs={L.CRS.Simple}
+          zoom={ZOOM_LEVEL}
+          maxZoom={ZOOM_LEVEL}
+          minZoom={ZOOM_LEVEL}
+          zoomControl={false}
+          tileSize={TILE_SIZE}
+          detectRetina={true}>
+          <CustomTileLayer
+            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
+        </StyledMap>
+        {this.state.caret}
+      </OuterDiv>
+    )
+  }
+}
+
+export default C;
