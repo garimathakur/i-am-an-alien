@@ -53,12 +53,10 @@ const Block = styled.div`
 
   a {
     cursor: pointer;
-    text-decoration: none;
-    color: ${props => props.linkColor}
+    color: ${props => props.linkColor};
   }
 
   a:visited {
-    text-decoration: none;
     color: ${props => colors.pink};
   }
 `;

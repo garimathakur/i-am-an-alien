@@ -11,7 +11,6 @@ const SuperBlock = styled.div`
 
   a {
     cursor: pointer;
-    text-decoration: none;
     color: ${props => colors[props.linkColor]};
   }
 

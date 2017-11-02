@@ -18,4 +18,5 @@ p {
 
 a, a:visited {
   text-decoration: none;
+  color: rgba(244,127,113,1);
 }

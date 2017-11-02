@@ -4,8 +4,10 @@ import styled, { keyframes } from 'styled-components';
 import colors from '../elements/colors';
 
 const LeftDiv = styled.div`
+  font-weight: normal;
+  font-family: 'Libre Baskerville', 'serif';
   display: inline-block;
-  width: 55%;
+  width: calc(55% - 1px);
   height: 100%;
   p {
     position: relative;
@@ -15,6 +17,9 @@ const LeftDiv = styled.div`
 `;
 
 const RightDiv = styled.div`
+  font-weight: normal;
+  font-family: 'Libre Baskerville', 'serif';
+  position: absolute;
   display: inline-block;
   width: 45%;
   height: 100%;
@@ -24,7 +29,6 @@ const RightDiv = styled.div`
     position: relative;
   }
   a {
-    text-decoration: none;
     color: ${colors.pink}
   }
 `;
