@@ -14,7 +14,7 @@ const vals = {
   touch: <BaskervilleDiv><Text italic>Everyone will only touch you through their glass walls</Text></BaskervilleDiv>,
   exist: <BaskervilleDiv><Text italic>You are loosing peices of your self</Text><Text italic>Can you gather them?</Text></BaskervilleDiv>,
   speak: <BaskervilleDiv><Text italic>You can speak but you have no voice</Text></BaskervilleDiv>,
-  travel: <BaskervilleDiv style={{marginBottom: '50px'}}><Text italic>You are traveling to a land of brown dirt like hair, volcanoes of cheese, streams of turmeric lattes, cardamom chai shakes and droids consuming them</Text><Text>Droids can be flexed with the new yoga training exercises</Text></BaskervilleDiv>,
+  travel: <BaskervilleDiv style={{paddingBottom: '5%'}}><Text italic>You are traveling to a land of brown dirt like hair, volcanoes of cheese, streams of turmeric lattes, cardamom chai shakes and droids consuming them</Text><Text italic>Droids can be flexed with the new yoga training exercises</Text></BaskervilleDiv>,
 };
 
 const TopDiv = styled.div`
@@ -41,6 +41,7 @@ const RightDiv = styled.div`
   position: absolute;
   display: inline-block;
   width: 45%;
+  padding-bottom: 5%;
   p {
     margin-left: 5px;
     position: relative;
@@ -48,10 +49,10 @@ const RightDiv = styled.div`
   a {
     color: ${colors.pink}
   }
-  margin-bottom: 50px;
 `;
 
 const ContainingDiv = styled.div`
+  margin-top: 5%;
   height: 35%;
   width: 100%;
 `;
@@ -81,8 +82,8 @@ class C extends Component {
 
     if (showWork && showSleep && showTouch && showExist && showSpeak && showTravel) {
       setTimeout(() => {
-        this.props.history.push('/c/10');
-      }, 4000);
+        this.props.history.push('/i/2');
+      }, 20000);
     }
   }
 
@@ -92,7 +93,7 @@ class C extends Component {
     });
     setTimeout(() => {
       window.scrollTo(0,document.body.scrollHeight)
-    }, 10);
+    }, 5);
   }
 
   render() {
@@ -110,7 +111,7 @@ class C extends Component {
           {this.state.showExist ? vals.exist : null}
           <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showSpeak')}>Speak</a></Text>
           {this.state.showSpeak ? vals.speak : null}
-          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showTravel')}>Travel</a></Text>
+          <Text style={this.state.showTravel ? null : {paddingBottom: '5%'}}><a style={{cursor: 'pointer'}} onClick={() => this.addText('showTravel')}>Travel</a></Text>
           {this.state.showTravel ? vals.travel : null}
         </RightDiv>
       </ContainingDiv>
