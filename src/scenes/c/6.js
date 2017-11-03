@@ -23,6 +23,7 @@ class C extends Component {
   componentDidUpdate() {
     setTimeout(() => {
       this.addYou();
+      window.scrollTo(0,document.body.scrollHeight)
     }, 500);
   }
 

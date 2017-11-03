@@ -36,7 +36,7 @@ const allLines = [
     <Text textColor='white'>Are you done?</Text>
   </div>,
   <div key='h'>
-    <Text textColor='white'>Have you cum yet? Can I move on</Text>
+    <Text textColor='white'>Have you cum yet? Can I move on?</Text>
   </div>,
   <div key='i'>
     <Text textColor='white'>You are covered with an invisibility cloak</Text>
@@ -60,14 +60,14 @@ class C extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.addline();
-    }, 2500);
+    }, 3500);
   }
 
   componentDidUpdate() {
     setTimeout(() => {
       this.addline();
       window.scrollTo(0,document.body.scrollHeight)
-    }, 2500);
+    }, 3500);
   }
 
   addline = () => {

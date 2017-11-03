@@ -2,16 +2,7 @@ import React, { Component } from 'react';
 import { Block, Text, Link } from '../elements';
 import styled from 'styled-components';
 import colors from '../elements/colors';
-import background from '../../images/gradient.jpg';
-
-const Background = styled.div`
-  position: fixed;
-  height: 105%;
-  width: 100%;
-  margin-top: -9%;
-  background-image: url(${background});
-  background-size: cover;
-`;
+import scrollToComponent from 'react-scroll-to-component';
 
 const LastText = styled(Text)`
   a {
@@ -65,6 +56,7 @@ class C extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     setTimeout(() => {
       this.addline();
     }, 3500);
@@ -73,7 +65,11 @@ class C extends Component {
   componentDidUpdate() {
     setTimeout(() => {
       this.addline();
-      window.scrollTo(0,document.body.scrollHeight)
+      if (this.state.lines.length > 1) {
+        scrollToComponent(this.refs.block, {
+          align: 'bottom'
+        })
+      }
     }, 3500);
   }
 
@@ -92,8 +88,13 @@ class C extends Component {
   render() {
     return (
       <div>
-        <Background/>
-        <Block position={5} width='80%' sansSerif={true} linkColor='yellow'>
+        <div style={{
+          background: 'linear-gradient(180deg, rgba(153,92,8,1) 0%, rgba(130,0,0,1) 17%, rgba(128,0,0,1) 28%, rgba(124,130,0,1) 100%)',
+          height: '125vh'
+        }}/>
+        <Block ref='block' position={5} width='80%' sansSerif={true} linkColor='yellow' style={{
+          position: 'absolute'
+        }}>
           {this.state.lines}
         </Block>
       </div>

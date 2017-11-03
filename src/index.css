@@ -3,7 +3,11 @@ html, head, body, #root {
   width: 100%;
   padding: 0px;
   margin: 0px;
+}
+
+html {
   background-color: rgba(210,35,42,1);
+  background: cover;
 }
 
 body {

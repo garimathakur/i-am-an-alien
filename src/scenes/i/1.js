@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Block, Text, Link, SuperBlock } from '../elements';
 import styled, { keyframes } from 'styled-components';
 import colors from '../elements/colors';
+import scrollToComponent from 'react-scroll-to-component';
 
 const BaskervilleDiv = styled.div`
   font-weight: normal;
   font-family: 'Libre Baskerville', 'serif';
+  padding-right: 3vw;
 `;
 
 const vals = {
@@ -35,7 +37,6 @@ const LeftDiv = styled.div`
 `;
 
 const RightDiv = styled.div`
-  height: 100%;
   font-weight: normal;
   font-family: 'Libre Baskerville', 'serif';
   position: absolute;
@@ -70,6 +71,10 @@ class C extends Component {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   componentDidUpdate() {
     const {
       showWork,
@@ -92,7 +97,9 @@ class C extends Component {
       [key]: true,
     });
     setTimeout(() => {
-      window.scrollTo(0,document.body.scrollHeight)
+      scrollToComponent(this.refs.rightdiv, {
+        align: 'bottom'
+      })
     }, 5);
   }
 
@@ -100,7 +107,7 @@ class C extends Component {
     return (
       <ContainingDiv>
         <LeftDiv><Text>you are an alien allowed to</Text></LeftDiv>
-        <RightDiv>
+        <RightDiv ref='rightdiv'>
           <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showWork')}>Work</a></Text>
           {this.state.showWork ? vals.work : null}
           <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showSleep')}>Sleep</a></Text>
