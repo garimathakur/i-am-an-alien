@@ -21,7 +21,7 @@ const allLines = [
     <Text textColor='white'>But we are not in this together<br/>You start to travel to the land of glass</Text>
   </div>,
   <div key='c'>
-    <Text textColor='white'>Everyone has walls of glass<br/>Every one lives inside walls of glass</Text>
+    <Text textColor='white'>Everyone has walls of glass<br/>Everyone lives inside walls of glass</Text>
   </div>,
   <div key='d'>
     <Text textColor='white'>They think you are scratching on their walls</Text>
@@ -60,14 +60,14 @@ class C extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.addline();
-    }, 3500);
+    }, 1500);
   }
 
   componentDidUpdate() {
     setTimeout(() => {
       this.addline();
       window.scrollTo(0,document.body.scrollHeight)
-    }, 3500);
+    }, 4000);
   }
 
   addline = () => {

@@ -59,7 +59,7 @@ class C extends Component {
     window.scrollTo(0, 0)
     setTimeout(() => {
       this.addline();
-    }, 3500);
+    }, 2000);
   }
 
   componentDidUpdate() {
@@ -70,7 +70,7 @@ class C extends Component {
           align: 'bottom'
         })
       }
-    }, 3500);
+    }, 4000);
   }
 
   addline = () => {
