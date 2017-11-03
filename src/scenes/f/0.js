@@ -5,8 +5,10 @@ import colors from '../elements/colors';
 import background from '../../images/gradient.jpg';
 
 const Background = styled.div`
-  height: 100%;
+  position: fixed;
+  height: 105%;
   width: 100%;
+  margin-top: -9%;
   background-image: url(${background});
   background-size: cover;
 `;
@@ -29,28 +31,28 @@ const Spacer = styled.div`
 
 const allLines = [
   <div key='a'>
-    <Text>Imagine a landscape made of your multiple mindscapes</Text>
+    <Text italic={true}>Imagine a landscape made of your multiple mindscapes</Text>
   </div>,
   <div key='b'>
-    <Text>You come from the land where lizards are crawling on the white walls</Text>
+    <Text italic={true}>You come from the land where lizards are crawling on the white walls</Text>
   </div>,
   <div key='c'>
-    <Text>You are a brown slithery translucent lizard</Text>
+    <Text italic={true}>You are a brown slithery translucent lizard</Text>
   </div>,
   <div key='d'>
-    <Text>You are being rubbed by the slimy white eyeballs all over your body</Text>
+    <Text italic={true}>You are being rubbed by the slimy white eyeballs all over your body</Text>
   </div>,
   <div key='e'>
-    <Text>The moss is growing</Text>
+    <Text italic={true}>The moss is growing</Text>
   </div>,
   <div key='f'>
-    <Text>Giant Snails are walking all over the piles of your migration paper</Text>
+    <Text italic={true}>Giant Snails are walking all over the piles of your migration paper</Text>
   </div>,
   <div key='g'>
-    <Text>They are getting wet and washed away in the rain</Text>
+    <Text italic={true}>They are getting wet and washed away in the rain</Text>
   </div>,
   <div key='h'>
-    <LastText><Link to='/i/0'>You think you are an ocean, but you are just a tiny tear drop</Link></LastText>
+    <LastText italic={true}><Link to='/i/0'>You think you are an ocean, but you are just a tiny tear drop</Link></LastText>
   </div>,
 ];
 
@@ -65,13 +67,14 @@ class C extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.addline();
-    }, 2500);
+    }, 3500);
   }
 
   componentDidUpdate() {
     setTimeout(() => {
       this.addline();
-    }, 2500);
+      window.scrollTo(0,document.body.scrollHeight)
+    }, 3500);
   }
 
   addline = () => {
@@ -88,11 +91,12 @@ class C extends Component {
 
   render() {
     return (
-      <Background>
-        <Block position={5} width='80%' sansSerif={true} italic={true} linkColor='yellow'>
+      <div>
+        <Background/>
+        <Block position={5} width='80%' sansSerif={true} linkColor='yellow'>
           {this.state.lines}
         </Block>
-      </Background>
+      </div>
     )
   }
 }

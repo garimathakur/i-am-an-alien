@@ -9,12 +9,12 @@ const BaskervilleDiv = styled.div`
 `;
 
 const vals = {
-  work: <BaskervilleDiv><Text>In case of fire, break the glass and run with your papers</Text><Text>If you lose your job, you will be deported in the next 30 days FIRE FIRE FIRE</Text></BaskervilleDiv>,
-  sleep: <BaskervilleDiv><Text>You can’t sleep</Text><Text>You can’t wake up</Text></BaskervilleDiv>,
-  touch: <BaskervilleDiv><Text>Everyone will only touch you through their glass walls</Text></BaskervilleDiv>,
-  exist: <BaskervilleDiv><Text>You are loosing peices of your self</Text><Text>Can you gather them?</Text></BaskervilleDiv>,
-  speak: <BaskervilleDiv><Text>You can speak but you have no voice</Text></BaskervilleDiv>,
-  travel: <BaskervilleDiv><Text>You are traveling to a land of brown dirt like hair, volcanoes of cheese, streams of turmeric lattes, cardamom chai shakes and droids consuming them</Text><Text>Droids can be flexed with the new yoga training exercises</Text></BaskervilleDiv>,
+  work: <BaskervilleDiv><Text italic>In case of fire, break the glass and run with your papers</Text><Text italic>If you lose your job, you will be deported in the next 30 days FIRE FIRE FIRE</Text></BaskervilleDiv>,
+  sleep: <BaskervilleDiv><Text italic>You can’t sleep</Text><Text italic>You can’t wake up</Text></BaskervilleDiv>,
+  touch: <BaskervilleDiv><Text italic>Everyone will only touch you through their glass walls</Text></BaskervilleDiv>,
+  exist: <BaskervilleDiv><Text italic>You are loosing peices of your self</Text><Text italic>Can you gather them?</Text></BaskervilleDiv>,
+  speak: <BaskervilleDiv><Text italic>You can speak but you have no voice</Text></BaskervilleDiv>,
+  travel: <BaskervilleDiv style={{marginBottom: '50px'}}><Text italic>You are traveling to a land of brown dirt like hair, volcanoes of cheese, streams of turmeric lattes, cardamom chai shakes and droids consuming them</Text><Text>Droids can be flexed with the new yoga training exercises</Text></BaskervilleDiv>,
 };
 
 const TopDiv = styled.div`
@@ -48,6 +48,7 @@ const RightDiv = styled.div`
   a {
     color: ${colors.pink}
   }
+  margin-bottom: 50px;
 `;
 
 const ContainingDiv = styled.div`
@@ -89,6 +90,9 @@ class C extends Component {
     this.setState({
       [key]: true,
     });
+    setTimeout(() => {
+      window.scrollTo(0,document.body.scrollHeight)
+    }, 10);
   }
 
   render() {

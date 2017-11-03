@@ -65,9 +65,9 @@ const Caret = styled.button`
   position: fixed;
   width: 1000px;
   height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-  border-left: 60px solid ${colors.pink};
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid ${colors.red};
   background: transparent;
   cursor: pointer;
 `;
