@@ -12,7 +12,7 @@ class C extends Component {
           <Text textColor='maroon'>Are you safe from all fear and rage from within and outside?</Text>
           <Text textColor='maroon'>The top layer of your skin is peeling off</Text>
         </Block>
-        <Block position={2} linkColor='yellow'>
+        <Block position={11} linkColor='yellow'>
           <Text scale={true}><Link to='/d/0'>Splendor of race</Link></Text>
         </Block>
       </SuperBlock>

@@ -66,6 +66,7 @@ class C extends Component {
   componentDidUpdate() {
     setTimeout(() => {
       this.addline();
+      window.scrollTo(0,document.body.scrollHeight)
     }, 2500);
   }
 

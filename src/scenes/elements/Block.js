@@ -46,7 +46,11 @@ const positions = [
   {
     top: '70%',
     left: '60%'
-  }
+  },
+  {
+    top: '-20%',
+    left: '10%',
+  },
 ];
 
 const Block = styled.div`
@@ -58,6 +62,7 @@ const Block = styled.div`
   left: ${props => positions[props.position].left};
   width: ${props => props.width ? props.width : '45%'};
   color: ${props => colors[props.textColor]};
+  margin-bottom: 50px;
 
   a {
     cursor: pointer;

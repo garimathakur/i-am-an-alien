@@ -4,6 +4,7 @@ import { scale } from '../animations';
 import colors from './colors';
 
 export const Text = styled.p`
+  padding-top: 0;
   color: ${props => colors[props.textColor]};
   transform-origin: left center;
   font-style: ${props => props.italic ? 'italic' : 'normal'};
