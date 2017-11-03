@@ -96,17 +96,17 @@ class C extends Component {
       <ContainingDiv>
         <LeftDiv><Text>you are an alien allowed to</Text></LeftDiv>
         <RightDiv>
-          <Text><a href='#' onClick={() => this.addText('showWork')}>Work</a></Text>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showWork')}>Work</a></Text>
           {this.state.showWork ? vals.work : null}
-          <Text><a href='#' onClick={() => this.addText('showSleep')}>Sleep</a></Text>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showSleep')}>Sleep</a></Text>
           {this.state.showSleep ? vals.sleep : null}
-          <Text><a href='#' onClick={() => this.addText('showTouch')}>Touch</a></Text>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showTouch')}>Touch</a></Text>
           {this.state.showTouch ? vals.touch : null}
-          <Text><a href='#' onClick={() => this.addText('showExist')}>Exist</a></Text>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showExist')}>Exist</a></Text>
           {this.state.showExist ? vals.exist : null}
-          <Text><a href='#' onClick={() => this.addText('showSpeak')}>Speak</a></Text>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showSpeak')}>Speak</a></Text>
           {this.state.showSpeak ? vals.speak : null}
-          <Text><a href='#' onClick={() => this.addText('showTravel')}>Travel</a></Text>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showTravel')}>Travel</a></Text>
           {this.state.showTravel ? vals.travel : null}
         </RightDiv>
       </ContainingDiv>
