@@ -52,11 +52,11 @@ class C extends Component {
     super(props);
     this.state = {
       lines: [],
-    }
+    };
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     setTimeout(() => {
       this.addline();
     }, 2000);
@@ -68,7 +68,7 @@ class C extends Component {
       if (this.state.lines.length > 1) {
         scrollToComponent(this.refs.block, {
           align: 'bottom'
-        })
+        });
       }
     }, 4000);
   }
@@ -77,7 +77,6 @@ class C extends Component {
     const { lines } = this.state;
 
     if (lines.length <= allLines.length) {
-      console.log('lines.length', lines.length);
       const newLines = allLines.slice(0, ++lines.length);
       this.setState({
         lines: newLines,
