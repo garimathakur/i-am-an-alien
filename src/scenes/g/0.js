@@ -5,6 +5,29 @@ import styled from 'styled-components';
 import colors from '../elements/colors';
 import background from '../../images/gradient.jpg';
 
+const halfWindowHeight = window.innerHeight/2;
+const oneEighthWindowWidth = window.innerWidth/8;
+
+const StaticMap = styled.div`
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: '1000000';
+`;
+
+const images = Array.apply(null, Array(48)).map((item, i) => {
+  const ThisImage = styled.img`
+    pointer-events: none;
+    display: block;
+    float: left;
+    border: 0;
+  `;
+  return <ThisImage src={require(`../../images/back/${i%16}.png`)} width={oneEighthWindowWidth} height={oneEighthWindowWidth}/>
+});
+
 const TOTAL_TILES = 16;
 const TILE_COLS = 8;
 const TILE_ROWS = 2;
@@ -21,7 +44,7 @@ const getImageUrl = (x, y) => {
   if (urls[imageNum]) {
     return urls[imageNum];
   } else {
-    urls[imageNum] = require(`../../images/back/${imageNum}.png`);
+    urls[imageNum] = require(`../../images/top/${imageNum}.png`);
     return urls[imageNum];
   }
 }
@@ -107,6 +130,9 @@ class C extends Component {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
         </StyledMap>
+        <StaticMap>
+          {images}
+        </StaticMap>
         {this.state.caret}
       </OuterDiv>
     )
