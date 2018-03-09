@@ -11,7 +11,7 @@ const BaskervilleDiv = styled.div`
 `;
 
 const vals = {
-  work: <BaskervilleDiv><Text italic>In case of fire, break the glass and run with your papers</Text><Text italic>If you lose your job, you will be deported in the next 30 days FIRE FIRE FIRE</Text></BaskervilleDiv>,
+  work: <BaskervilleDiv><Text italic>In case of fire, break the glass & run with your papers</Text><Text italic>If you lose your job, you will be deported in the next 30 days FIRE FIRE FIRE</Text></BaskervilleDiv>,
   sleep: <BaskervilleDiv><Text italic>You can’t sleep</Text><Text italic>You can’t wake up</Text></BaskervilleDiv>,
   touch: <BaskervilleDiv><Text italic>Everyone will only touch you through their glass walls</Text></BaskervilleDiv>,
   exist: <BaskervilleDiv><Text italic></Text>You are loosing pieces of your self<Text italic>Can you gather them?</Text></BaskervilleDiv>,
