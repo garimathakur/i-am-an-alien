@@ -16,7 +16,7 @@ const vals = {
   touch: <BaskervilleDiv><Text italic>Everyone will only touch you through their glass walls</Text></BaskervilleDiv>,
   exist: <BaskervilleDiv><Text italic>You are loosing pieces of your self</Text><Text italic>Can you gather them?</Text></BaskervilleDiv>,
   speak: <BaskervilleDiv><Text italic>You can speak but you have no voice</Text></BaskervilleDiv>,
-  travel: <BaskervilleDiv style={{paddingBottom: '5%'}}><Text italic>You are traveling to a land of brown dirt like hair, volcanoes of cheese, streams of turmeric lattes, cardamom chai shakes and droids consuming them</Text><Text italic>Droids can be flexed with the new yoga training exercises</Text></BaskervilleDiv>,
+  travel: <BaskervilleDiv style={{paddingBottom: '6%'}}><Text italic>You are traveling to a land of brown dirt like hair, volcanoes of cheese, streams of turmeric lattes, cardamom chai shakes and droids consuming them</Text><Text italic>Droids can be flexed with the new yoga training exercises</Text></BaskervilleDiv>,
 };
 
 const TopDiv = styled.div`
