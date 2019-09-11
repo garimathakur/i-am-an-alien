@@ -36,7 +36,7 @@ const allLines = [
     <Text textColor='white'>Are you done?</Text>
   </div>,
   <div key='h'>
-    <Text textColor='white'>Can I move on?</Text>
+    <Text textColor='white'>Can I move on?no?</Text>
   </div>,
   <div key='i'>
     <Text textColor='white'>You are covered with an invisibility cloak</Text>
