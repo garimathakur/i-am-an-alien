@@ -26,14 +26,14 @@ const allLines = [
     <Text>They think you are snatching their sleep and sucking blood from their lands to survive</Text>
   </div>,
   <div key='f'>
-    <Text>“Where do you think your ass got this car from?</Text>
+    <Text>“Where do you think you got this car from?</Text>
     <Text>Aren’t you done sucking up all the resources, a men yelled coming in the opposite direction on a one way street when <Link to='/h/5'>you</Link> honked at him”</Text>
   </div>,
   <div key='g'>
     <Text>Are you done?</Text>
   </div>,
   <div key='h'>
-    <Text>Have you cum yet? Can I move on</Text>
+    <Text>Can I move on? no?</Text>
   </div>,
   <div key='i'>
     <Text>You are covered with an</Text>
