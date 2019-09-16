@@ -9,7 +9,7 @@ const Spacer = styled.div`
 const allLines = [
   <div>
     <Text textColor='white'>You come from a land of palaces,</Text>
-    <Text textColor='white'>Kohinoor and yakshis.</Text>
+    <Text textColor='white'>Kohinoor & yakshis.</Text>
   </div>,
   <div>
     <Text textColor='white'>The gems stones embedded on</Text>
