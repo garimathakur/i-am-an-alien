@@ -4,32 +4,43 @@ import { Block, Text, Link, SuperBlock } from '../elements';
 class C extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      visitedOnePages: window.hasVistedAnimatedFeelings1 || window.hasVistedAnimatedFeelings2,
-      // visitedBothPages: window.hasVistedAnimatedFeelings1 && window.hasVistedAnimatedFeelings2,
-    };
+  }
+
+  componentDidMount() {
+    if (window.hasVistedAnimatedFeelings1 && window.hasVistedAnimatedFeelings2) {
+      this.props.history.pathname !== '/d/3' && this.props.history.push('/d/3');
+    }
   }
 
   render() {
-    if (!this.state.visitedOnePages) {
+    if (this.props.to) {
       return (
-        <Block position={3}>
-          <Text><Link to='/d/1'>estranged</Link> or <Link to='/d/1'>excluded</Link></Text>
-        </Block>
-      );
-    } else if (this.state.visitedOnePages) {
-      return (
-        <Block position={3}>
-          <Text><Link to='/d/2'>estranged</Link> or <Link to='/d/2'>excluded</Link></Text>
-        </Block>
-      );
-    } else {
-      return (
-        <Block position={3}>
-          <Text><Link to='/a/4'>estranged</Link> or <Link to='/a/4'>excluded</Link></Text>
-        </Block>
-      );
+        <SuperBlock>
+          <Block position={5}>
+            <Text><Link to={this.props.to}>estranged</Link></Text>
+          </Block>
+          <Block position={9}>
+            <Text>or</Text>
+          </Block>
+          <Block position={10}>
+            <Text><Link to={this.props.to}>excluded</Link></Text>
+          </Block>
+        </SuperBlock>
+      )
     }
+    return (
+      <SuperBlock>
+        <Block position={5}>
+          {window.hasVistedAnimatedFeelings1 ? <Text>estranged</Text> : <Text><Link to={'/d/1'}>estranged</Link></Text>}
+        </Block>
+        <Block position={9}>
+          <Text>or</Text>
+        </Block>
+        <Block position={10}>
+          {window.hasVistedAnimatedFeelings2 ? <Text>excluded</Text> : <Text><Link to={'/d/2'}>excluded</Link></Text>}
+        </Block>
+      </SuperBlock>
+    );
   }
 }
 

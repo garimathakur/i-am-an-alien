@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import L from 'leaflet';
 import { Map, TileLayer } from 'react-leaflet';
 import styled from 'styled-components';
 import colors from '../elements/colors';
 import background from '../../images/gradient.jpg';
+
+const halfWindowHeight = window.innerHeight/2;
+const oneEighthWindowWidth = window.innerWidth/8;
+
+const StaticMap = styled.div`
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: '1000000';
+`;
+
+const images = Array.apply(null, Array(48)).map((item, i) => {
+  const ThisImage = styled.img`
+    pointer-events: none;
+    display: block;
+    float: left;
+    border: 0;
+  `;
+  return <ThisImage src={require(`../../images/back/${i%16}.png`)} width={oneEighthWindowWidth} height={oneEighthWindowWidth}/>
+});
 
 const TOTAL_TILES = 16;
 const TILE_COLS = 8;
@@ -21,7 +44,7 @@ const getImageUrl = (x, y) => {
   if (urls[imageNum]) {
     return urls[imageNum];
   } else {
-    urls[imageNum] = require(`../../images/back/${imageNum}.png`);
+    urls[imageNum] = require(`../../images/top/${imageNum}.png`);
     return urls[imageNum];
   }
 }
@@ -39,7 +62,6 @@ class CustomTileLayer extends TileLayer {
     const { map, url, ...props } = this.props;
 
     this.leafletElement.__proto__.getTileUrl = function (tilePoint) {
-      console.log('tilePoint', tilePoint);
       if (tilePoint.z === ZOOM_LEVEL) {
         if (tilePoint.y < TILE_COLS) {
           return getImageUrl(tilePoint.x, tilePoint.y);
@@ -54,24 +76,67 @@ class CustomTileLayer extends TileLayer {
 
 const position = [0, 0];
 
-const Component = () => (
-  <StyledMap
-    center={position}
-    crs={L.CRS.Simple}
-    zoom={ZOOM_LEVEL}
-    maxZoom={ZOOM_LEVEL}
-    minZoom={ZOOM_LEVEL}
-    zoomControl={false}
-    tileSize={TILE_SIZE}
-    detectRetina={true}>
-    <CustomTileLayer
-      url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-      getTileUrl={(a) => {
-        console.log('a', a);
-      }}
-      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    />
-  </StyledMap>
-);
+const OuterDiv = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
-export default Component;
+const Caret = styled.button`
+  z-index: 1000000000;
+  top: calc(50% - 50px);
+  left: 81%;
+  position: fixed;
+  width: 1000px;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid ${colors.red};
+  background: transparent;
+  cursor: pointer;
+`;
+
+class C extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      caret: null,
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        caret: (
+          <Caret onClick={() => this.props.history.push('/f/0')}/>
+        )
+      })
+    }, 30000);
+  }
+
+  render() {
+    return (
+      <OuterDiv>
+        <StyledMap
+          center={position}
+          crs={L.CRS.Simple}
+          zoom={ZOOM_LEVEL}
+          maxZoom={ZOOM_LEVEL}
+          minZoom={ZOOM_LEVEL}
+          zoomControl={false}
+          tileSize={TILE_SIZE}
+          detectRetina={true}>
+          <CustomTileLayer
+            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
+        </StyledMap>
+        <StaticMap>
+          {images}
+        </StaticMap>
+        {this.state.caret}
+      </OuterDiv>
+    )
+  }
+}
+
+export default C;

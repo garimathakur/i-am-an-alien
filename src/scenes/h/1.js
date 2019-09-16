@@ -9,7 +9,7 @@ const Spacer = styled.div`
 const Component = () => (
   <Block>
     <Spacer/>
-    <Text>A land made of aliens</Text>
+    <Text>A land made of aliens.</Text>
     <Text><Link to='/h/2'>We are all in this together</Link></Text>
   </Block>
 );

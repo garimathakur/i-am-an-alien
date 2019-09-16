@@ -12,7 +12,7 @@ class C extends Component {
       <SuperBlock>
         <Block position={4} linkColor='pink' italic sensSerif={true}>
           <Text serif={false}>
-            <Link to='/c/8'>You have cut off all your feelings</Link>
+            <Link to='/c/9'>You have cut off all your feelings</Link>
           </Text>
         </Block>
       </SuperBlock>

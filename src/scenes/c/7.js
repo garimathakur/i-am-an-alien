@@ -24,7 +24,7 @@ const GrowingYou = styled(Text)`
   left: ${props => randomNumInRange(padding, window.innerWidth - padding)}px;
   transform-origin: center center;
   position: fixed;
-  animation: ${props => scales[randomIntInRange(0,9)]} 0.7s ease 0s 1 normal forwards;
+  animation: ${props => scales[randomIntInRange(0,9)]} 1.4s ease 0s 1 normal forwards;
 `;
 
 class C extends Component {
@@ -42,7 +42,7 @@ class C extends Component {
         <GrowingYou textColor='pink' key={'b'}>you are an alien</GrowingYou>,
         <GrowingYou textColor='pink' key={'c'}>you are an alien</GrowingYou>,
         <GrowingYou textColor='pink' key={'d'}>you are an alien</GrowingYou>,
-        <GrowingYou textColor='pink' key={'e'}><Link to='/c/8'>you are an alien</Link></GrowingYou>,
+        <GrowingYou textColor='pink' key={'e'}>you are an alien</GrowingYou>,
         <GrowingYou textColor='pink' key={'f'}>you are an alien</GrowingYou>,
       ]
       this.setState({
@@ -58,7 +58,7 @@ class C extends Component {
           {this.state.yous}
         </Block>
         <Block position={6}>
-          <Text textColor='pink'>you are an alien</Text>
+          <Text textColor='pink'><Link to='/c/8'>you are an alien</Link></Text>
         </Block>
       </SuperBlock>
     )

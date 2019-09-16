@@ -8,6 +8,19 @@ const Spacer = styled.div`
 
 const allLines = [
   <div>
+    <Text textColor='white'>You come from a land of palaces,</Text>
+    <Text textColor='white'>kohinoor and yakshis.</Text>
+  </div>,
+  <div>
+    <Text textColor='white'>The gems stones embedded on</Text>
+    <Text textColor='white'>the walls of the palaces have been</Text>
+    <Text textColor='white'>gouged out like eye balls off the</Text>
+    <Text textColor='white'>sockets of a human body</Text>
+  </div>,
+];
+
+const allLinkLines = [
+  <div>
     <Text><Link to='/h/3'>You come from a land of palaces,</Link></Text>
     <Text><Link to='/h/3'>kohinoor and yakshis.</Link></Text>
   </div>,
@@ -36,6 +49,7 @@ class C extends Component {
   componentDidUpdate() {
     setTimeout(() => {
       this.addline();
+      window.scrollTo(0,document.body.scrollHeight)
     }, 2500);
   }
 
@@ -54,7 +68,7 @@ class C extends Component {
   render() {
     return (
       <Block position={2}>
-        {this.state.lines}
+        {this.state.lines.length === 2 ? allLinkLines : this.state.lines}
       </Block>
     )
   }

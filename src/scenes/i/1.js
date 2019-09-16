@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 import { Block, Text, Link, SuperBlock } from '../elements';
 import styled, { keyframes } from 'styled-components';
 import colors from '../elements/colors';
+import scrollToComponent from 'react-scroll-to-component';
 
 const BaskervilleDiv = styled.div`
   font-weight: normal;
   font-family: 'Libre Baskerville', 'serif';
+  padding-right: 3vw;
 `;
 
 const vals = {
-  work: <BaskervilleDiv><Text>In case of fire, break the glass and run with your papers</Text><Text>If you lose your job, you will be deported in the next 30 days FIRE FIRE FIRE</Text></BaskervilleDiv>,
-  sleep: <BaskervilleDiv><Text>You can’t sleep</Text><Text>You can’t wake up</Text></BaskervilleDiv>,
-  touch: <BaskervilleDiv><Text>Everyone will only touch you through their glass walls</Text></BaskervilleDiv>,
-  exist: <BaskervilleDiv><Text>You are loosing peices of your self</Text><Text>Can you gather them?</Text></BaskervilleDiv>,
-  speak: <BaskervilleDiv><Text>You can speak but you have no voice</Text></BaskervilleDiv>,
-  travel: <BaskervilleDiv><Text>You are traveling to a land of brown dirt like hair, volcanoes of cheese,</Text><Text>streams of turmeric lattes, cardamom chai shakes and droids consuming them</Text><Text>Droids can be  exed with the new yoga training exercises</Text></BaskervilleDiv>,
+  work: <BaskervilleDiv><Text italic>In case of fire, break the glass & run with your papers</Text><Text italic>If you lose your job, you will be deported in the next 30 days FIRE FIRE FIRE</Text></BaskervilleDiv>,
+  sleep: <BaskervilleDiv><Text italic>You can’t sleep</Text><Text italic>You can’t wake up</Text></BaskervilleDiv>,
+  touch: <BaskervilleDiv><Text italic>Everyone will only touch you through their glass walls</Text></BaskervilleDiv>,
+  exist: <BaskervilleDiv><Text italic>You are loosing pieces of your self</Text><Text italic>Can you gather them?</Text></BaskervilleDiv>,
+  speak: <BaskervilleDiv><Text italic>You can speak but you have no voice</Text></BaskervilleDiv>,
+  travel: <BaskervilleDiv style={{paddingBottom: '6%'}}><Text italic>You are traveling to a land of brown dirt like hair, volcanoes of cheese, streams of turmeric lattes, cardamom chai shakes and droids consuming them</Text><Text italic>Droids can be flexed with the new yoga training exercises</Text></BaskervilleDiv>,
 };
 
 const TopDiv = styled.div`
@@ -35,12 +37,12 @@ const LeftDiv = styled.div`
 `;
 
 const RightDiv = styled.div`
-  height: 100%;
   font-weight: normal;
   font-family: 'Libre Baskerville', 'serif';
   position: absolute;
   display: inline-block;
   width: 45%;
+  padding-bottom: 5%;
   p {
     margin-left: 5px;
     position: relative;
@@ -51,6 +53,7 @@ const RightDiv = styled.div`
 `;
 
 const ContainingDiv = styled.div`
+  margin-top: 5%;
   height: 35%;
   width: 100%;
 `;
@@ -68,6 +71,10 @@ class C extends Component {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   componentDidUpdate() {
     const {
       showWork,
@@ -80,8 +87,8 @@ class C extends Component {
 
     if (showWork && showSleep && showTouch && showExist && showSpeak && showTravel) {
       setTimeout(() => {
-        this.props.history.push('/c/8');
-      }, 1000);
+        this.props.history.push('/i/2');
+      }, 20000);
     }
   }
 
@@ -89,24 +96,29 @@ class C extends Component {
     this.setState({
       [key]: true,
     });
+    setTimeout(() => {
+      scrollToComponent(this.refs.rightdiv, {
+        align: 'bottom'
+      })
+    }, 5);
   }
 
   render() {
     return (
       <ContainingDiv>
         <LeftDiv><Text>you are an alien allowed to</Text></LeftDiv>
-        <RightDiv>
-          <Text><a href='#' onClick={() => this.addText('showWork')}>Work</a></Text>
+        <RightDiv ref='rightdiv'>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showWork')}>Work</a></Text>
           {this.state.showWork ? vals.work : null}
-          <Text><a href='#' onClick={() => this.addText('showSleep')}>Sleep</a></Text>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showSleep')}>Sleep</a></Text>
           {this.state.showSleep ? vals.sleep : null}
-          <Text><a href='#' onClick={() => this.addText('showTouch')}>Touch</a></Text>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showTouch')}>Touch</a></Text>
           {this.state.showTouch ? vals.touch : null}
-          <Text><a href='#' onClick={() => this.addText('showExist')}>Exist</a></Text>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showExist')}>Exist</a></Text>
           {this.state.showExist ? vals.exist : null}
-          <Text><a href='#' onClick={() => this.addText('showSpeak')}>Speak</a></Text>
+          <Text><a style={{cursor: 'pointer'}} onClick={() => this.addText('showSpeak')}>Speak</a></Text>
           {this.state.showSpeak ? vals.speak : null}
-          <Text><a href='#' onClick={() => this.addText('showTravel')}>Travel</a></Text>
+          <Text style={this.state.showTravel ? null : {paddingBottom: '5%'}}><a style={{cursor: 'pointer'}} onClick={() => this.addText('showTravel')}>Travel</a></Text>
           {this.state.showTravel ? vals.travel : null}
         </RightDiv>
       </ContainingDiv>

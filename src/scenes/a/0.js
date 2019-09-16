@@ -1,10 +1,18 @@
-import React from 'react';
-import { Block, Text, Link } from '../elements';
+import React, { Component } from 'react';
+import { Block, Text, Link, SuperBlock } from '../elements';
 
-const Component = () => (
-  <Block>
-    <Text><Link to='/a/1'>cities</Link> without <Link to='/e/0'>citizens</Link></Text>
-  </Block>
-);
+class C extends Component {
+  componentDidMount() {
+    window.hasVistedAnimatedFeelings1 = false;
+    window.hasVistedAnimatedFeelings2 = false;
+  }
+  render() {
+    return (
+      <Block>
+        <Text><Link to='/a/1'>cities</Link> without <Link to='/e/0'>citizens</Link></Text>
+      </Block>
+    );
+  }
+}
 
-export default Component;
+export default C;
