@@ -30,7 +30,7 @@ const allLines = [
     <Text textColor='white'>They think you are snatching their sleep and sucking blood from their lands to survive</Text>
   </div>,
   <div key='f'>
-    <Text textColor='white' italic={true} sansSerif={true}>“Where do you think your ass got this car from?<br/>Aren’t you done sucking up all the resources, a man yelled coming in the opposite direction on a one way street when you honked at him”</Text>
+    <Text textColor='white' italic={true} sansSerif={true}>“Where do you think you got this car from?<br/>Aren’t you done sucking up all the resources, a man yelled coming in the opposite direction on a one way street when you honked at him”</Text>
   </div>,
   <div key='g'>
     <Text textColor='white'>Are you done?</Text>
