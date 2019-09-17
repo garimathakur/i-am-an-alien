@@ -30,22 +30,13 @@ const allLines = [
     <Text textColor='white'>They think you are snatching their sleep and sucking blood from their lands to survive</Text>
   </div>,
   <div key='f'>
-<<<<<<< HEAD
-    <Text>“Where do you think you got this car from?</Text>
-    <Text>Aren’t you done sucking up all the resources, a men yelled coming in the opposite direction on a one way street when <Link to='/h/5'>you</Link> honked at him”</Text>
-=======
     <Text textColor='white' italic={true} sansSerif={true}>“Where do you think your ass got this car from?<br/>Aren’t you done sucking up all the resources, a man yelled coming in the opposite direction on a one way street when you honked at him”</Text>
->>>>>>> origin/master
   </div>,
   <div key='g'>
     <Text textColor='white'>Are you done?</Text>
   </div>,
   <div key='h'>
-<<<<<<< HEAD
-    <Text>Can I move on? no?</Text>
-=======
     <Text textColor='white'>Can I move on?no?</Text>
->>>>>>> origin/master
   </div>,
   <div key='i'>
     <Text textColor='white'>You are covered with an invisibility cloak</Text>
