@@ -42,7 +42,7 @@ const allLines = [
     <Text textColor='white'>You are covered with an invisibility cloak</Text>
   </div>,
   <div key='j'>
-    <Text textColor='white'>You can only be seen by a few others</Text>
+    <Text textColor='white'>You can only be seen by a few other</Text>
   </div>,
   <YellowLinkDiv key='k'>
     <Text textColor='white'><Link to='/h/5'>You</Link> are the other</Text>
