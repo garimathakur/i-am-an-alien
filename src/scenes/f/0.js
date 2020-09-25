@@ -43,7 +43,7 @@ const allLines = [
     <Text italic={true}>They are getting wet and washed away in the rain</Text>
   </div>,
   <div key='h'>
-    <LastText italic={true}><Link to='/i/0'>You think you are  a chutiya , but you are just a tiny tear drop</Link></LastText>
+    <LastText italic={true}><Link to='/i/0'>You think you are  an ocean , but you are just a tiny tear drop</Link></LastText>
   </div>,
 ];
 
